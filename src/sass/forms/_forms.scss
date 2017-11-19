@@ -1,0 +1,16 @@
+// Remove Focus Boxes
+select:focus {
+  outline: none !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+@import 'input-fields';
+@import 'radio-buttons';
+@import 'checkboxes';
+@import 'select';
+//@import 'switches';
+//@import 'file-input';
+//@import 'range';
