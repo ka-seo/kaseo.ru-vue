@@ -1,115 +1,93 @@
-$color-base: #000;
-$color-primary: #507299;
-$color-secondary: #55677d;
-$color-tertiary: #dae2ea;
+/////////////////////////////////////
+// COLORS
+/////////////////////////////////////
+
+//color body text
+$color-base: #232323;
+
+// additional colors
+$color-primary: #ac6dff;
+$color-secondary: #ffab2f;
+$color-tertiary: $color-base;
+
+$color-body: #fff;
+
 $color-head: $color-base;
-$color-link: #2a5885;
-$color-link-hover: lighten($color-primary, 7%);
-//$color-placeholder: red;
+
+$color-link: $color-primary;
+$color-link-hover: lighten($color-link, .2);
+
+$color-placeholder: #989898;
 $color-req: #ec5555;
 $color-error: #F44336;
 $color-success: #4CAF50;
-$body-bg: #edeef0;
-
-$secondary-color: $color-secondary;
-
-$font-name-1: 'OpenSansRegular';
-$font-name-2: 'OpenSansBold';
-$font-name-3: 'OpenSansBold';
-
-$font-base: $font-name-1, 'Arial', 'Helvetica', sans-serif;
-$font-head: $font-name-2, 'Arial', 'Helvetica', sans-serif;
-$font-strong: $font-name-2,'Arial', 'Helvetica', sans-serif;
-$font-size: 14px;
-
-$heading-h1: 1.875rem;
-$heading-h2: 1.65rem;
-$heading-h3: 1.45rem;
-$heading-h4: 1.25rem;
-$heading-h5: 1.125rem;
-$heading-h6: 1rem;
 
 $img: "../img";
 $font-path: "../fonts";
 
-$breakpoint-xxl: 1600px;
+$bodyImage: null;
+$bgRepeat: repeat;
+
+/////////////////////////////////////
+// FONT FAMILY
+/////////////////////////////////////
+
+$font-local-1: false !default;
+$font-local-2: false !default;
+$font-local-3: false !default;
+$font-local-4: false !default;
+$font-local-5: false !default;
+
+$font-1: 'Didact Gothic' !default;
+$font-2: 'Barlow' !default;
+$font-3: null !default;
+$font-4: null !default;
+$font-5: null !default;
+
+$font-primary: $font-1 !default;
+$font-secondary: $font-2 !default;
+$font-base: $font-primary;
+$font-head: $font-secondary !default;
+$font-head-weight: 300 !default;
+
+$font-spare: 'sans-serif' !default;
+$font-strong: null !default;
+
+@if($font-spare) { $font-spare: $font-spare; }
+@if($font-1) { $font-1: $font-1; }
+@if($font-2) { $font-2: $font-2; }
+@if($font-3) { $font-3: $font-3; }
+@if($font-4) { $font-4: $font-4; }
+@if($font-5) { $font-5: $font-5; }
+
+@if($font-spare) {
+  $font-base: $font-base, $font-spare;
+  $font-head: $font-head, $font-spare;
+  $font-strong: $font-strong, $font-spare;
+}
+
+// Font size
+$font-size: 16px;
+
+
+
+/////////////////////////////////////
+// HEADINGS
+/////////////////////////////////////
+//$font-primary: 'Arial' !default;
+$heading-h1: 1.75rem;
+$heading-h2: 1.55rem;
+$heading-h3: 1.125rem;
+$heading-h4: 1rem;
+$heading-h5: 1rem;
+$heading-h6: 1rem;
+
+$breakpoint-xxxl: 1600px;
+$breakpoint-xxl: 1400px;
 $breakpoint-xl: 1200px;
 $breakpoint-lg: 992px;
 $breakpoint-md: 768px;
-$breakpoint-sm: 600px;
+$breakpoint-sm: 576px;
 
-
-//$input-height: auto;
-//$placeholder-text-color: #ccc;
-//$input-border: 0;
-//$input-font-size: $font-size;
-//$input-margin: 0;
-//$input-padding: 0;
-//$input-transition: all .2s ease-in-out;
-//$input-disabled-color: #ccc;
-//$input-disabled-border: #ccc;
-//$input-focus-color: green;
-
-//$input-success-color: $color-success;
-//$input-invalid-border: $color-error;
-//$input-error-color: $color-error;
-//$input-error-color: $color-error;
-//$input-border-color: $color-primary;
-//$input-background: #fff;
-//$input-margin-bottom: 10px;
-$dropdown-item-height: 10px;
-
-// 9. Dropdown
-// ==========================================================================
-
-$dropdown-bg-color: #fff !default;
-$dropdown-hover-bg-color: #eee !default;
-$dropdown-color: $secondary-color !default;
-$dropdown-item-height: 50px !default;
-
-// Text Inputs + Textarea
-$input-height: auto !default;
-$input-border-color: #c7c8ca !default;
-$input-border: 1px solid $input-border-color !default;
-$input-background: #fff !default;
-$input-error-color: $color-error !default;
-$input-success-color: $color-success !default;
-$input-focus-color: $secondary-color !default;
-$input-font-size: 1rem !default;
-$input-margin-bottom: 10px;
-$input-margin: 0 0 $input-margin-bottom 0 !default;
-$input-padding: 7px !default;
-$input-transition: all .3s !default;
-$label-font-size: .875rem !default;
-$input-disabled-color: rgba(0,0,0, .42) !default;
-$input-disabled-solid-color: #949494 !default;
-$input-disabled-border: 1px dotted $input-disabled-color !default;
-$input-invalid-border: 1px solid $input-error-color !default;
-$placeholder-text-color: #7c7f82 !default;
-
-// Radio Buttons
-$radio-fill-color: $secondary-color !default;
-$radio-empty-color: #5a5a5a !default;
-$radio-border: 2px solid $radio-fill-color !default;
-
-// Range
-$range-height: 14px !default;
-$range-width: 14px !default;
-$track-height: 3px !default;
-
-// Select
-$select-border: 1px solid $input-border-color !default;
-$select-background: rgba(255, 255, 255, 0.90) !default;
-$select-focus: 1px solid lighten($secondary-color, 47%) !default;
-$select-option-hover: rgba(0,0,0,.06) !default;
-$select-option-focus: rgba(0,0,0,.03) !default;
-$select-padding: 5px !default;
-$select-radius: 2px !default;
-$select-disabled-color: rgba(0,0,0,.3) !default;
-
-// Switches
-$switch-bg-color: $secondary-color !default;
-$switch-checked-lever-bg: desaturate(lighten($switch-bg-color, 25%), 25%) !default;
-$switch-unchecked-bg: #F1F1F1 !default;
-$switch-unchecked-lever-bg: rgba(0,0,0,.38) !default;
-$switch-radius: 15px !default;
+// Плавное смещение блоков
+$smooth: false !default;

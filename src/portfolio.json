@@ -1,0 +1,235 @@
+{
+    "portfolio": [{
+            "type": ["makeup"],
+            "name": "ГуруМФО лендинг готового решения",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+            "date": {
+                "month": "December",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/turnkey_solution/complete/",
+            "website": "http://sitemfo.ru",
+            "img": "/portfolio/sitemfo-turnkey.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "ГуруМФО. Лендинг для разработки индивидуального решения",
+            "text": "",
+            "date": {
+                "month": "December",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/turnkey_solution/complete/individual/",
+            "website": "http://sitemfo.ru/individual/",
+            "img": "/portfolio/sitemfo-individual.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "ГуруМФО. Демо-режим готового решения",
+            "text": "",
+            "date": {
+                "month": "December",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/turnkey_solution/complete/demo/",
+            "website": "http://sitemfo.ru/demo/",
+            "img": "/portfolio/sitemfo-solution.jpg"
+        },
+        {
+            "type": ["makeup", "design"],
+            "name": "Авто из Европы",
+            "text": "Разработка дизайна. Верстка. AJAX отправка email",
+            "date": {
+                "month": "December",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/auto777",
+            "website": "http://auto777.by",
+            "img": "/portfolio/auto777.jpg"
+        },
+        {
+            "type": ["makeup", "design", "wordpress"],
+            "name": "Express Oil Change",
+            "text": "Разработка дизайна. Верстка. Установка на Wordpress",
+            "date": {
+                "month": "November",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/expressoilchange",
+            "website": "http://expresservice.by/",
+            "img": "/portfolio/express-oil-change.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Noname Business",
+            "text": "",
+            "date": {
+                "month": "October",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/business",
+            "website": "",
+            "img": "/portfolio/simple-business.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Yakov Ryabikin Tattoo",
+            "text": "",
+            "date": {
+                "month": "September",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/39tattoo",
+            "website": "",
+            "img": "/portfolio/39tatoo.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Легко24",
+            "text": "",
+            "date": {
+                "month": "June",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/legko24",
+            "website": "http://legko24.ru/",
+            "img": "/portfolio/legko24.jpg"
+        },
+        {
+            "type": [
+                ["makeup"]
+            ],
+            "name": "Практика",
+            "text": "",
+            "date": {
+                "month": "May",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/praktika/",
+            "website": "https://praktika.ru/",
+            "img": "/portfolio/praktika.jpg"
+        },
+        {
+            "type": ["makeup", "design"],
+            "name": "Self-Print Photo",
+            "text": "",
+            "date": {
+                "month": "April",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/self-print-photolanding/",
+            "website": "http://photo.self-print.ru/",
+            "img": "/portfolio/self-print.jpg"
+        },
+        {
+            "type": ["makeup", "design", "wordpress"],
+            "name": "Ирина Алампиева",
+            "text": "",
+            "date": {
+                "month": "April",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/irinadesign/",
+            "website": "http://alampieva.by",
+            "img": "/portfolio/alampieva.jpg"
+        },
+        {
+            "type": [
+                ["makeup"]
+            ],
+            "name": "ФК \"Champions\"",
+            "text": "",
+            "date": {
+                "month": "March",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/champions/",
+            "website": "http://champfit.ru/",
+            "img": "/portfolio/champfit.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "РеальноДеньги",
+            "text": "",
+            "date": {
+                "month": "January",
+                "year": "2017"
+            },
+            "link": "http://kaseo.ru/makeup/realmoney/",
+            "website": "http://www.realnodengi24.ru",
+            "img": "/portfolio/realmoney.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Лайтфин",
+            "text": "",
+            "date": {
+                "month": "December",
+                "year": "2016"
+            },
+            "link": "http://kaseo.ru/makeup/lightfin/",
+            "website": "https://lightfin.ru/",
+            "img": "/portfolio/lightfin.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Incredit",
+            "text": "",
+            "date": {
+                "month": "November",
+                "year": "2016"
+            },
+            "link": "http://kaseo.ru/makeup/incredit/",
+            "website": "https://incredit.ru/",
+            "img": "/portfolio/incredit.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "РубльВам",
+            "text": "",
+            "date": {
+                "month": "November",
+                "year": "2016"
+            },
+            "link": "http://kaseo.ru/makeup/roubledam/",
+            "website": "https://rublvam.ru/",
+            "img": "/portfolio/rubldam.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Finsmart24",
+            "text": "",
+            "date": {
+                "month": "October",
+                "year": "2016"
+            },
+            "link": "http://kaseo.ru/makeup/finsmart24/",
+            "website": "https://finsmart24.es/",
+            "img": "/portfolio/finsmart24.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Пятак",
+            "text": "",
+            "date": {
+                "month": "September",
+                "year": "2016"
+            },
+            "link": "http://kaseo.ru/makeup/pyatak/",
+            "website": "https://microzaim5.ru",
+            "img": "/portfolio/pyatak.jpg"
+        },
+        {
+            "type": ["makeup"],
+            "name": "Карманные деньги",
+            "text": "",
+            "date": {
+                "month": "January",
+                "year": "2015"
+            },
+            "link": "http://kaseo.ru/makeup/karmanfinance/",
+            "website": "http://sitemfo.ru/portfolio/pocket/",
+            "img": "/portfolio/karmannie.jpg"
+        }
+    ]
+}

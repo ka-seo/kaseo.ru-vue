@@ -5,12 +5,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
-    build: path.join(__dirname, 'dist')
+    build: path.join(__dirname, 'dist'),
+    prod: path.join(__dirname, 'prod')
 };
 
 module.exports = {
     entry: {
-        'index': PATHS.source + '/applications/index/index.js',
+        app: PATHS.source + '/main.js',
     },
     output: {
         path: PATHS.build,
@@ -18,8 +19,7 @@ module.exports = {
         library: '[name]'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
@@ -31,7 +31,7 @@ module.exports = {
                 // include: PATHS.source,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader!postcss-loader!sass-loader?name=css/[name].[ext]'
+                    use: 'css-loader!postcss-loader!sass-loader'
                 })
             },
             {
@@ -53,11 +53,11 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-url-loader',
-                include: PATHS.source + "/assets",
+                loader: 'svg-url-loader?limit=100000',
+                // include: PATHS.source + "/img",
                 options: {
                     name: '[name].[ext]',
-                    outputPath: 'images/',
+                    outputPath: 'images/'
                 }
             },
             {
@@ -74,6 +74,7 @@ module.exports = {
                 options: {
                     name: '[name].[ext]',
                     outputPath: 'fonts/',
+                    limit: 1000000,
                 }
             }
         ]
@@ -81,27 +82,23 @@ module.exports = {
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(), //если будт ошибки сборка не произойдет и не создаст файлы
         new ExtractTextPlugin({
-            filename: "css/[name].css",
+            filename: "[name].css",
             allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
-            // minChunks: 2
         }),
         new HtmlWebpackPlugin({
-            title: 'Andrew Klimov',
+            title: 'Andrew Klimov - Responsible Frontend-Developer',
             template: './src/tpl/index.html',
-            chunks: ['index', 'common'],
+            // chunks: ['app', 'common'],
             filename: PATHS.build + '/index.html'
-        }),
-        new webpack.ProvidePlugin({
-            Vue: 'vue/dist/vue.js'
         })
     ],
     resolve: {
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
-        }
+            'vue$': 'vue/dist/vue.esm.js',
+        },
     },
     devServer: {
         historyApiFallback: true,
@@ -114,9 +111,27 @@ module.exports = {
     // devtool: '#eval-source-map'
 };
 
+
+if (process.env.NODE_ENV === 'development') {
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"development"'
+            }
+        }),
+        new webpack.LoaderOptionsPlugin({
+            minimize: false
+        }),
+        new webpack.ProvidePlugin({
+            Vue: 'vue/dist/vue.js'
+        })
+    ])
+}
+
 if (process.env.NODE_ENV === 'production') {
     // module.exports.devtool = '#nosources-source-map' //#source-map
     // http://vue-loader.vuejs.org/en/workflow/production.html
+    module.exports.output.path = PATHS.prod;
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {
@@ -131,6 +146,14 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
+        }),
+        new HtmlWebpackPlugin({
+            title: "Andrew Klimov - Responsible Frontend-Developer",
+            template: './src/tpl/index.html',
+            filename: PATHS.prod + '/index.html'
+        }),
+        new webpack.ProvidePlugin({
+            Vue: 'vue/dist/vue.min.js'
         })
     ])
 }

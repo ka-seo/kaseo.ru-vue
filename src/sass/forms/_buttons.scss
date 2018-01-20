@@ -1,0 +1,131 @@
+/* Buttons
+   ========================================================================== */
+
+
+@mixin large-btn {
+  height: 3.5rem;
+  width: 13.4375rem;
+  display: block;
+
+  font-size: 1.063rem;
+  line-height: 1.063rem;
+  font-weight: 700;
+  letter-spacing: 0.036rem;
+}
+
+.btn {
+  padding: 1rem 1.125rem;
+  color: $color-base;
+  border: 1px solid $color-base;
+  background: transparent;
+
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: normal;
+  text-shadow: none;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  box-shadow: none;
+  border-radius: 0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  transition: background .2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background-color: $color-base;
+  }
+
+  .fa,
+  .icon {
+    margin-right: .5rem;
+  }
+}
+
+.btn {
+  &-primary {
+    color: $color-base;
+    background-color: $color-primary;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: lighten($color-primary, 10%);
+    }
+  }
+
+  &-secondary {
+    color: #808080;
+    background-color: #F5F5F5;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $color-primary;
+    }
+  }
+
+  &-large {
+    @include large-btn;
+  }
+
+  &-fill {
+    z-index: 1;
+    transition: width .3s linear;
+
+    &:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $color-base;
+      z-index: -1;
+      transition: width .3s ease-out;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &-link {
+    padding: 0;
+    background: transparent;
+    display: inline-block;
+    color: $color-base;
+    border: 0;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    text-transform: none;
+
+    &.disabled {
+      opacity: .7;
+      cursor: default;
+
+      &:hover,
+      &:focus {
+        color: inherit;
+      }
+    }
+  }
+}

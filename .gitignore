@@ -1,5 +1,7 @@
-node_modules/
-assets/
-dist/
+.idea
+node_modules
+assets
+dist
+prod
 yarn.lock
 yarn-error.log
